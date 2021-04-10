@@ -1,0 +1,193 @@
+\hypertarget{class_asteroid}{}\doxysection{Asteroid Class Reference}
+\label{class_asteroid}\index{Asteroid@{Asteroid}}
+
+
+Главный класс уничтожающихся объектов, содержащий все необходимые методы и поля  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+
+
+Inherited by \mbox{\hyperlink{class_enemy_ship}{Enemy\+Ship}}, \mbox{\hyperlink{class_small_asteroid}{Small\+Asteroid}}, and \mbox{\hyperlink{class_small_small_asteroid}{Small\+Small\+Asteroid}}.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_asteroid_a38350a12c436371986edd307ef721006}{Damage\+Taken}} (Collider2D other, Game\+Object Main, Game\+Object Sub)
+\begin{DoxyCompactList}\small\item\em Метод, обрабатывающий уничтожение объекта. Используется в случае Instantiate других объектов при своём уничтожении \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_asteroid_a3ac5cba6236f4f836d7bd86c432476c2}{Damage\+Taken}} (Collider2D other, Game\+Object Main)
+\begin{DoxyCompactList}\small\item\em Метод, обрабатывающий уничтожение объекта. Используется в случае не Instantiate других объектов при своём уничтожении \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_asteroid_a8de109a2224f50bf4f8235cecfdadf2d}{Get\+Index\+In\+Spawner}} (Game\+Object game\+Object)
+\begin{DoxyCompactList}\small\item\em Метод, возвращающий индекс префаба из массива префабов для спавна, определённого в классе Object\+Spawner \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_asteroid_ab5b96d5ce815804f7acb8cc6bbdb0948}{De\+Spawn}} (int Index\+In\+Spawner)
+\begin{DoxyCompactList}\small\item\em Метод, уничтожающий объекты при достижении заданной дистанции между игроком и объектом этого класса. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_asteroid_a0f76000e58798276f3c32d5f44aae2d8}{Start\+Initialisation}} ()
+\begin{DoxyCompactList}\small\item\em Метод, инициализирующий поля spawner,player, а также стартовый вектор ускорения объекта \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_asteroid_a2f9ab14e885ef25b87671aeb400ada64}{crash}}
+\begin{DoxyCompactList}\small\item\em Звук, воспроизводящийся при разрушении объекта (Destroy) \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_asteroid_a77395d16474ec765170ab6b0892c70a2}{Particle\+System}}
+\begin{DoxyCompactList}\small\item\em Система частиц, вопсроизводящаяся при разрушении объекта \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_asteroid_ac9338d6e1254ab957179caec7d4fe541}{Medium\+Asteroid}}
+\begin{DoxyCompactList}\small\item\em Префаб объекта, создающийся при разрушении объекта Asteroid\+Big \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_asteroid_acca012c99e23780f467688c038a9231b}{Small\+Asteroid}}
+\begin{DoxyCompactList}\small\item\em Префаб объекта, создающийся при разрушении объекта Asteroid\+Medium \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_asteroid_ac182c2afa3c53e0e64ec6c2bb7e01617}{value}}
+\begin{DoxyCompactList}\small\item\em Вес объекта, или score points, начисляющийся при уничтожении игроком \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_asteroid_afa09dfb30a97473a1d4cb41180bcb667}{despawn\+Distance}}
+\begin{DoxyCompactList}\small\item\em Дистанция между объектом и игроком, на которой объект уничтожается \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_asteroid_afe9bd09586e97d890d7380edcf08152e}{player}}
+\begin{DoxyCompactList}\small\item\em Объект -\/ Игрок, для расчёта дистанции \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_obejct_spawner}{Obejct\+Spawner}} \mbox{\hyperlink{class_asteroid_a1d5283ae0e42b07eb689074c20e68ee3}{spawner}}
+\begin{DoxyCompactList}\small\item\em Класс, контролирующий поддержания заданного количества объектов на сцене \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Главный класс уничтожающихся объектов, содержащий все необходимые методы и поля 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_asteroid_a3ac5cba6236f4f836d7bd86c432476c2}\label{class_asteroid_a3ac5cba6236f4f836d7bd86c432476c2}} 
+\index{Asteroid@{Asteroid}!DamageTaken@{DamageTaken}}
+\index{DamageTaken@{DamageTaken}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{DamageTaken()}{DamageTaken()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Asteroid.\+Damage\+Taken (\begin{DoxyParamCaption}\item[{Collider2D}]{other,  }\item[{Game\+Object}]{Main }\end{DoxyParamCaption})}
+
+
+
+Метод, обрабатывающий уничтожение объекта. Используется в случае не Instantiate других объектов при своём уничтожении 
+
+\mbox{\Hypertarget{class_asteroid_a38350a12c436371986edd307ef721006}\label{class_asteroid_a38350a12c436371986edd307ef721006}} 
+\index{Asteroid@{Asteroid}!DamageTaken@{DamageTaken}}
+\index{DamageTaken@{DamageTaken}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{DamageTaken()}{DamageTaken()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Asteroid.\+Damage\+Taken (\begin{DoxyParamCaption}\item[{Collider2D}]{other,  }\item[{Game\+Object}]{Main,  }\item[{Game\+Object}]{Sub }\end{DoxyParamCaption})}
+
+
+
+Метод, обрабатывающий уничтожение объекта. Используется в случае Instantiate других объектов при своём уничтожении 
+
+\mbox{\Hypertarget{class_asteroid_ab5b96d5ce815804f7acb8cc6bbdb0948}\label{class_asteroid_ab5b96d5ce815804f7acb8cc6bbdb0948}} 
+\index{Asteroid@{Asteroid}!DeSpawn@{DeSpawn}}
+\index{DeSpawn@{DeSpawn}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{DeSpawn()}{DeSpawn()}}
+{\footnotesize\ttfamily void Asteroid.\+De\+Spawn (\begin{DoxyParamCaption}\item[{int}]{Index\+In\+Spawner }\end{DoxyParamCaption})}
+
+
+
+Метод, уничтожающий объекты при достижении заданной дистанции между игроком и объектом этого класса. 
+
+\mbox{\Hypertarget{class_asteroid_a8de109a2224f50bf4f8235cecfdadf2d}\label{class_asteroid_a8de109a2224f50bf4f8235cecfdadf2d}} 
+\index{Asteroid@{Asteroid}!GetIndexInSpawner@{GetIndexInSpawner}}
+\index{GetIndexInSpawner@{GetIndexInSpawner}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{GetIndexInSpawner()}{GetIndexInSpawner()}}
+{\footnotesize\ttfamily int Asteroid.\+Get\+Index\+In\+Spawner (\begin{DoxyParamCaption}\item[{Game\+Object}]{game\+Object }\end{DoxyParamCaption})}
+
+
+
+Метод, возвращающий индекс префаба из массива префабов для спавна, определённого в классе Object\+Spawner 
+
+\mbox{\Hypertarget{class_asteroid_a0f76000e58798276f3c32d5f44aae2d8}\label{class_asteroid_a0f76000e58798276f3c32d5f44aae2d8}} 
+\index{Asteroid@{Asteroid}!StartInitialisation@{StartInitialisation}}
+\index{StartInitialisation@{StartInitialisation}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{StartInitialisation()}{StartInitialisation()}}
+{\footnotesize\ttfamily void Asteroid.\+Start\+Initialisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод, инициализирующий поля spawner,player, а также стартовый вектор ускорения объекта 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_asteroid_a2f9ab14e885ef25b87671aeb400ada64}\label{class_asteroid_a2f9ab14e885ef25b87671aeb400ada64}} 
+\index{Asteroid@{Asteroid}!crash@{crash}}
+\index{crash@{crash}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{crash}{crash}}
+{\footnotesize\ttfamily Audio\+Source Asteroid.\+crash}
+
+
+
+Звук, воспроизводящийся при разрушении объекта (Destroy) 
+
+\mbox{\Hypertarget{class_asteroid_afa09dfb30a97473a1d4cb41180bcb667}\label{class_asteroid_afa09dfb30a97473a1d4cb41180bcb667}} 
+\index{Asteroid@{Asteroid}!despawnDistance@{despawnDistance}}
+\index{despawnDistance@{despawnDistance}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{despawnDistance}{despawnDistance}}
+{\footnotesize\ttfamily float Asteroid.\+despawn\+Distance}
+
+
+
+Дистанция между объектом и игроком, на которой объект уничтожается 
+
+\mbox{\Hypertarget{class_asteroid_ac9338d6e1254ab957179caec7d4fe541}\label{class_asteroid_ac9338d6e1254ab957179caec7d4fe541}} 
+\index{Asteroid@{Asteroid}!MediumAsteroid@{MediumAsteroid}}
+\index{MediumAsteroid@{MediumAsteroid}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{MediumAsteroid}{MediumAsteroid}}
+{\footnotesize\ttfamily Game\+Object Asteroid.\+Medium\+Asteroid}
+
+
+
+Префаб объекта, создающийся при разрушении объекта Asteroid\+Big 
+
+\mbox{\Hypertarget{class_asteroid_a77395d16474ec765170ab6b0892c70a2}\label{class_asteroid_a77395d16474ec765170ab6b0892c70a2}} 
+\index{Asteroid@{Asteroid}!ParticleSystem@{ParticleSystem}}
+\index{ParticleSystem@{ParticleSystem}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{ParticleSystem}{ParticleSystem}}
+{\footnotesize\ttfamily Game\+Object Asteroid.\+Particle\+System}
+
+
+
+Система частиц, вопсроизводящаяся при разрушении объекта 
+
+\mbox{\Hypertarget{class_asteroid_afe9bd09586e97d890d7380edcf08152e}\label{class_asteroid_afe9bd09586e97d890d7380edcf08152e}} 
+\index{Asteroid@{Asteroid}!player@{player}}
+\index{player@{player}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily Game\+Object Asteroid.\+player}
+
+
+
+Объект -\/ Игрок, для расчёта дистанции 
+
+\mbox{\Hypertarget{class_asteroid_acca012c99e23780f467688c038a9231b}\label{class_asteroid_acca012c99e23780f467688c038a9231b}} 
+\index{Asteroid@{Asteroid}!SmallAsteroid@{SmallAsteroid}}
+\index{SmallAsteroid@{SmallAsteroid}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{SmallAsteroid}{SmallAsteroid}}
+{\footnotesize\ttfamily Game\+Object Asteroid.\+Small\+Asteroid}
+
+
+
+Префаб объекта, создающийся при разрушении объекта Asteroid\+Medium 
+
+\mbox{\Hypertarget{class_asteroid_a1d5283ae0e42b07eb689074c20e68ee3}\label{class_asteroid_a1d5283ae0e42b07eb689074c20e68ee3}} 
+\index{Asteroid@{Asteroid}!spawner@{spawner}}
+\index{spawner@{spawner}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{spawner}{spawner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_obejct_spawner}{Obejct\+Spawner}} Asteroid.\+spawner}
+
+
+
+Класс, контролирующий поддержания заданного количества объектов на сцене 
+
+\mbox{\Hypertarget{class_asteroid_ac182c2afa3c53e0e64ec6c2bb7e01617}\label{class_asteroid_ac182c2afa3c53e0e64ec6c2bb7e01617}} 
+\index{Asteroid@{Asteroid}!value@{value}}
+\index{value@{value}!Asteroid@{Asteroid}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int Asteroid.\+value}
+
+
+
+Вес объекта, или score points, начисляющийся при уничтожении игроком 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Asteroid.\+cs\end{DoxyCompactItemize}
